@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="@string/title_ticker_counter"
-        android:textSize="16dp"
+        android:textSize="24dp"
         app:layout_constraintBottom_toTopOf="@+id/text_counter"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -23,11 +23,13 @@
         android:id="@+id/text_counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="16dp"
         android:text="00"
         android:textSize="32dp"
         app:layout_constraintBottom_toTopOf="@+id/button_add_one_count"
-        tools:layout_editor_absoluteX="174dp"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
     <Button
         android:id="@+id/button_add_one_count"
@@ -36,14 +38,19 @@
         android:layout_marginBottom="16dp"
         android:text="@string/button_add_one"
         app:layout_constraintBottom_toTopOf="@+id/button_reset_count"
-        tools:layout_editor_absoluteX="148dp"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
     <Button
         android:id="@+id/button_reset_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="@string/button_reset"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="384dp"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="148dp"/>
 
 </android.support.constraint.ConstraintLayout>
