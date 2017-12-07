@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private String COUNTER_KEY = "counter";
     private int mCounter = 0;
 
     @Override
@@ -23,6 +24,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         resetCountButton = findViewById(R.id.button_reset_count);
         resetCountButton.setOnClickListener(this);
+
+        if (savedInstanceState != null) {
+            mCounter = savedInstanceState.getInt(COUNTER_KEY);
+            updateCounterView();
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt(COUNTER_KEY, mCounter);
     }
 
     @Override
